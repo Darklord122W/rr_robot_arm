@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rr_arm">
+    <gazebo>
+      <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
+        <parameters>$(find rr_arm_controller)/config/rr_arm_controllers.yaml</parameters>
+        </plugin>
+    </gazebo>
+
+    <gazebo reference="ee_link">
+      <material>Gazebo/Red</material>
+      <gravity>false</gravity>
+      <selfCollide>false</selfCollide>
+      </gazebo>
+</robot>
